@@ -20,6 +20,6 @@ export class Logger {
 
   print(s: Readonly<string>): void {
     const date = this.#formatDate(new Date());
-    Deno.stdout.write(encoder.encode(`${this.#prefix ?? ""}${date} ${s}\n`));
+    console.log(encoder.encode(`${this.#prefix ?? ""}${date} ${s}\n`));
   }
 }
